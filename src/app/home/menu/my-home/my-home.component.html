@@ -1,20 +1,27 @@
-<mat-card class="example-card" appearance="outlined" style="width:500px;">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
+<div style="width: 700px;margin: 20px;">
+  <h1>Student Registration Form</h1>
+  <hr>
+  <form #userForm = "ngForm" (ngSubmit)="onSubmit(userForm)">
+    <p>
+    <label for="name">Name :</label>
+    <input type="text" placeholder="Enter Name" id="name" name="name" ngModel required>
+    </p>
+
+    <p>
+      <label for="name">Mail :</label>
+      <input type="text" placeholder="Mail" id="mail" name="mail" ngModel required>
       </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-  
+
+      <p>
+        <label for="name">Mobile :</label>
+        <input type="text" placeholder="Mobile" id="mobile" name="mobile" ngModel required>
+        </p>
+    <p>
+      <button type="submit" mat-raised-button [disabled]="userForm.invalid" color="primary">Submit</button>
+    </p>
+  </form>
+</div>
+Input JSON Data : 
+<p>
+{{submitData | json}}
+</p>
